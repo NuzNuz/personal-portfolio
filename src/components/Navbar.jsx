@@ -3,6 +3,8 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
+import Resume from '../assets/NazeerAResume1.pdf'
+import Logo from '../assets/logo.png'
 
 const Navbar = () => {
 
@@ -11,9 +13,10 @@ const Navbar = () => {
         setNav(!nav)
     }
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 '>
         <div>
             <p>Nazeer Abuchaar</p>
+            <img src={Logo} width={100} height={100} className='p-2'/>
         </div>
         
             <ul className='hidden md:flex'>
@@ -46,10 +49,10 @@ const Navbar = () => {
                     <a href='https://github.com/NuzNuz' className='flex justify-between items-center w-full text-gray-300'>Github <FaGithub  size={30}/></a>
                 </li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                    <a  className='flex justify-between items-center w-full text-gray-300'>Email <HiOutlineMail  size={30}/></a>
+                    <a href='mailto:trnazeer14@gmail.com' className='flex justify-between items-center w-full text-gray-300'>Email <HiOutlineMail  size={30}/></a>
                 </li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                    <a className='flex justify-between items-center w-full text-gray-300'>Resume <BsFillPersonLinesFill  size={30}/></a>
+                    <a className='flex justify-between items-center w-full text-gray-300' href={Resume} download='NazeerAbuchaarResume'>Resume <BsFillPersonLinesFill  size={30}/></a>
                 </li>
             </ul>
         </div>
